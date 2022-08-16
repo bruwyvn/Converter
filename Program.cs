@@ -20,7 +20,12 @@ namespace Converter
         static void Main(string[] args)
         {
             Console.Write("Insira um numero: ");
-            Console.WriteLine(ConvertToInt(Console.ReadLine()));
+            try {
+               Console.WriteLine(ConvertToInt(Console.ReadLine())); 
+            } catch (Exception e) {
+                Console.Write(e.Message);
+            }
+            
         }
     }
 }
