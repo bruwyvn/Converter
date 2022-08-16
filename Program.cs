@@ -9,6 +9,8 @@ namespace Converter
             int sum = 0;
             foreach (var num in stdin)
             {
+                if (num < 48 || num > 57)
+                    throw new Exception(num + " não é um numero");
                 sum = sum + ((num - 48) * (int) Math.Pow(10, power));
                 power--;
             }
